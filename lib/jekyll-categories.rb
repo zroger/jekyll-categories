@@ -1,3 +1,5 @@
+require 'jekyll-categories/tags'
+
 module Jekyll
   module Categories
     class CategoryIndex < Page
