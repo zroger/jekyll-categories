@@ -113,7 +113,7 @@ module Jekyll
         base_url = context.registers[:site].config['base-url'] || '/'
         category_dir = context.registers[:site].config['category_dir'] || 'categories'
 
-        category = context[@category] || @category.strip.tr(' ', '-').downcase
+        category = (context[@category] || @category).strip.tr(' ', '-').downcase
         category.empty? ? "#{base_url}#{category_dir}" : "#{base_url}#{category_dir}/#{category}"
       end
     end
